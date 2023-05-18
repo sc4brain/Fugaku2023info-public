@@ -1,0 +1,21 @@
+login4$ spack load cmake@3.24.3
+==> Error: cmake@3.24.3 matches multiple packages.
+  Matching packages:
+    7iqxomq cmake@3.24.3%fj@4.8.1 arch=linux-rhel8-a64fx
+    qcnssm6 cmake@3.24.3%fj@4.8.1 arch=linux-rhel8-a64fx
+    fqndemf cmake@3.24.3%gcc@8.4.1 arch=linux-rhel8-skylake_avx512
+    xt6hxj7 cmake@3.24.3%gcc@12.2.0 arch=linux-rhel8-cascadelake
+    3casg7a cmake@3.24.3%gcc@12.2.0 arch=linux-rhel8-cascadelake
+    5di6sys cmake@3.24.3%gcc@12.2.0 arch=linux-rhel8-cascadelake
+    e6cdlwg cmake@3.24.3%gcc@12.2.0 arch=linux-rhel8-cascadelake
+    p5qsrqc cmake@3.24.3%fj@4.8.1 arch=linux-rhel8-a64fx
+    wyds2me cmake@3.24.3%gcc@12.2.0 arch=linux-rhel8-cascadelake
+  Use a more specific spec (e.g., prepend '/' to the hash).
+login4$ spack load xt6hxj7
+==> Error: Spec 'xt6hxj7' matches no installed packages.
+login4$ spack load /xt6hxj7
+login4$ which cmake
+/vol0004/apps/oss/spack-v0.19/opt/spack/linux-rhel8-cascadelake/gcc-12.2.0/cmake-3.24.3-xt6hxj7bdvxxeo2hyc4ybfmjr34grplu/bin/cmake
+login4$ spack unload /xt6hxj7
+login4$ which cmake
+/bin/cmake
